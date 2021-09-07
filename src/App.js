@@ -1,6 +1,6 @@
 import React, {useReducer} from 'react';
 import {initialState, reducer} from './reducers/index.js';
-import { applyNumber, changeOperation } from './actions/index.js';
+import { applyNumber, changeOperation, clearDisplay } from './actions/index.js';
 import './App.css';
 
 import TotalDisplay from './components/TotalDisplay';
@@ -72,7 +72,8 @@ function App() {
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"}/>
+              <CalcButton value={"CE"}
+                          onClick={() => dispatch(clearDisplay())}/>
             </div>
 
           </form>
