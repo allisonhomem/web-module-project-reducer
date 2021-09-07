@@ -10,3 +10,4 @@ export const addOne = () => {
 export const applyNumber = (number) => {
     return({type:APPLY_NUMBER, payload:number});
 }
+
